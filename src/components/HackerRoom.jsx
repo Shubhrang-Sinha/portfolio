@@ -1,13 +1,190 @@
-import React from "react";
+import React, { useRef } from 'react'
+import { useGLTF } from '@react-three/drei'
 
-const HackerRoom = () => {
-    return(
-        <div>
-            
-        </div>
-        
-
-    )
+export function HackerRoom(props) {
+  const { nodes, materials } = useGLTF('/scene.gltf')
+  return (
+    <group {...props} dispose={null}>
+      <group scale={0.305}>
+        <group rotation={[0, -0.277, 0]} scale={0.033}>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.legs_top_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.legs_top_R_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_top_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.footrest_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.footrest_hinge_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.outer_back_leg_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.backRest_support_R_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_bottom_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.backRest_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.outer_front_leg_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.backRest_support_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_pole_R_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_top_R_low__DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_bottom_R_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.armRest_pole_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.inner_front_leg_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.inner_back_leg_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.seat_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.FF_hinge_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.FB_hinge_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.BB_hinge_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.BF_hinge_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.dowell_L_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.dowell_R_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.hinge_RF_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.hinge_RB_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.hinge_LB_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.hinge_LF_low_DirectorChair_MAT_0.geometry}
+            material={materials.DirectorChair_MAT}
+          />
+        </group>
+      </group>
+    </group>
+  )
 }
 
-export default HackerRoom;
+useGLTF.preload('/scene.gltf')
+
+
+
+
+
+export default HackerRoom

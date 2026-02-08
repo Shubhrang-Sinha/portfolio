@@ -3,6 +3,7 @@ import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
+import { ReactThreeFiber } from '@react-three/fiber'
 
 export default defineConfig([
   globalIgnores(['dist']),
@@ -22,7 +23,12 @@ export default defineConfig([
         sourceType: 'module',
       },
     },
+    plugins: {
+      react,
+      '@react-three' : ReactThreeFiber
+    },
     rules: {
+      'react/no-unknown-property ':'off',
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
