@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export function HackerRoom(props) {
-  const { nodes, materials } = useGLTF('/scene.gltf')
+  const { nodes,materials } = useGLTF('/models/mymodel/scene.gltf')
   return (
     <group {...props} dispose={null}>
       <group scale={0.305}>
@@ -181,7 +181,7 @@ export function HackerRoom(props) {
   )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('models/mymodel/scene.gltf')
 
 
 
